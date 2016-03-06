@@ -25,7 +25,7 @@
         #Introduction to Wearable Computing and Arduino with the Adafruit Gemma
 
         Created by [Stacey Vetzal](http://github.com/svetzal) for Ladies Learning Code / Girls Learning Code, based on content by Kathryn Barrett.
-        
+
         This presentation will have updates from time to time. You can always download the [latest version of this presentation here](http://github.com/svetzal/klc-arduino-gemma/archive/master.zip)
     </script>
 </section>
@@ -46,25 +46,33 @@
 
             <h2>Download<br> & Install</h2>
             <ul class="downloads">
-                <li>Arduino Studio for Gemma</li>
-                <li>Learner files (zip file): <a href="#">http://short-url-to-zip.com</a>
+                <li>
+                    Arduino 1.6.7 (
+                    <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.7-windows.exe">Windows</a>,
+                    <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.7-macosx.zip">Mac</a>,
+                    <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.7-linux64.tar.xz">Linux
+                        64-bit</a>,
+                    <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.7-linux32.tar.xz">Linux
+                        32-bit</a>
+                    )
+                </li>
+                <li>Learner files (zip file): <a
+                        href="#">http://github.com/svetzal/klc-arduino-gemma/archive/master.zip</a>
                     <ul>
                         <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
                         <li>open <strong>slides.html</strong> in the browser to view the slides</li>
                     </ul>
                 </li>
-                <li>Atom Editor: <a href="http://atom.io">http://atom.io</a></li>
-                <li>Chrome Browser:
-                    <a href="https://www.google.ca/chrome/browser/desktop/">
-                        https://www.google.ca/chrome
-                    </a>
+                <li>Follow the <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/arduino-1-dot-6-x-ide">"Super
+                    Easy Installation" section on this page</a> to configure your Arduino software to work with the
+                    Adafruit Gemma
                 </li>
             </ul>
         </div>
         <footer>
             <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
                     alt="Creative Commons License" src="framework/img/cc-by-nc.png"/></a>
-            <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a
+            <p class="left">Content created by <a href="http://github.com/svetzal">Stacey Vetzal</a> for <a
                     prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com"
                     property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
             <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span
@@ -76,18 +84,22 @@
         <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
         <h1 class="heading-bg">
         <span>
-          Title of Workshop<br>
-          Second Line
+          Introduction to Wearable Computing
+          and Arduino with the Adafruit Gemma
         </span>
         </h1>
 
         <!-- FILL IN INSTRUCTOR DETAILS -->
-        <img class="instructor" src="http://christinatruong.com/christina-truong-square.jpg" alt="Christina Truong">
-        <h2><span class="cursive">with</span> Instructor name</h2>
+        <img class="instructor" src="https://s.gravatar.com/avatar/e1c15eafbd93ae6ec4e73a1bb97cb559?s=250"
+             alt="Stacey Vetzal">
+        <h2><span class="cursive">with</span> Stacey Vetzal</h2>
         <ul>
-            <li><a href="mailto:">hello@email.com</a></li>
-            <li><a href="http://website.com">website.com</a></li>
-            <li><a href="http://twitter.com/">@twitter</a></li>
+            <li><a href="mailto:stacey@vetzal.com">stacey@vetzal.com</a></li>
+            <li>
+                <a href="http://codemanship.ca">Codemanship.ca</a>,
+                <a href="http://mojility.ca">Mojility Inc.</a>
+            </li>
+            <li><a href="http://twitter.com/svetzal">@svetzal</a></li>
         </ul>
 
         <div class="sponsor">
@@ -96,7 +108,7 @@
         <footer>
             <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
                     alt="Creative Commons License" src="framework/img/cc-by-nc.png"/></a>
-            <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a
+            <p class="left">Content created by <a href="http://github.com/svetzal">Stacey Vetzal</a> for <a
                     prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com"
                     property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
             <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span
@@ -104,6 +116,99 @@
         </footer>
     </section>
 
+    <section class="slide" data-markdown data-toc>
+        <script type="text/template">
+            # Icebreaker Game
+
+            Now you know who I am, who are you?!
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/template">
+            # Today's Agenda
+
+            - Learn what Arduino is and how it works
+            - Write code so Arduino can do cool stuff!
+            - Make circuits so our code can talk to electronics
+            - Learn about how we can make things around us smarter (or sillier!)
+            - Break some stuff 😱
+            - Make it work again 😉
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/template">
+            # What is Arduino?
+
+            Arduino is two things:
+
+            1. A tiny computer chip, on a "microcontroller" board (the Arduino board)
+                - They come in all kinds of shapes and sizes, some are faster, some have more RAM and storage, some have more "I/O" connections, just like everyone's computer is different, so are Arduinos
+            2. A program (IDE) you run on your computer to program your Arduino board
+                - The IDE can program all kinds of different Arduino boards with all kinds of different Arduino chips
+                - You use the IDE to program a Sketch, and then you Upload that Sketch to your Arduino board
+                - Your Sketch tells the Arduino board what to do, and how to do it!
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+        <script type="text/template">
+            # Arduino is all about Inputs and Outputs (I/O)
+
+            What is the Input and what is the Output?
+
+            - [LED Drum Set](https://learn.adafruit.com/gemma-powered-neopixel-led-sound-reactive-drums)
+            - [Firewalker Sneakers](https://learn.adafruit.com/gemma-led-sneakers)
+            - [Luminch One](http://makezine.com/projects/Luminch-One/#.UDQKm4aJl8E)
+            - [High Five Camera](http://www.instructables.com/id/High-Five-Camera/)
+            - [Singing Plant](http://www.instructables.com/id/Singing-plant-Make-your-plant-sing-with-Arduino-/)
+            - [Space Invader Pendant](https://learn.adafruit.com/trinket-slash-gemma-space-invader-pendant)
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/template">
+            # What does it mean to...
+            
+            - Prototype?
+            - Tinker?
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # What does it mean?
+            
+            - Wearable Computing?
+            - Physical Computing?
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # The Arduino Way
+            
+            > "The Arduino philosophy is based on making designs rather than talking about them. It is a constant
+            > search for faster and more powerful ways to build better prototypes."
+            
+            - Your questions will have hard answers
+            - You will get lost along the way
+            - You will break stuff
+            - That's the point! That's where the fun begins!
+            - Talk to others, work with others, together you can do more!
+        </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown data-toc>
+        <script type="text/markdown">
+            # Making mistakes...
+            
+            ![](http://cl.ly/image/3c2y1v2A2o1q/Image%202015-01-29%20at%2011.55.36%20PM.png)
+            ![](http://cl.ly/image/3Z3U023P361J/Image%202015-01-30%20at%2012.37.27%20AM.png)            
+        </script>
+    </section>
+    
     <section class="slide" data-markdown data-toc>
         <script type="text/template">
             #Instructions
@@ -120,8 +225,35 @@
             <base target="_blank">` in the `head` tag.
 
             View the rest of the presentation for theme examples and more information about Markdown support and editable in-slide CSS examples.
-        </script>
+        </scri
+            <section class="slide" data-markdown data-toc>
+                <script type="text/markdown">
+                # What does it mean?
+                
+                - Wearable Computing?
+                - Physical Computing?
+       
+            pt>
     </section>
+
+<section class=slide" data-markdown data-toc>
+<script type=text/markdown"> >
+# The Arduino W> ay
+
+"The Arduino philosophy is based on making designs rather than talking about them. It is a constant
+- Your questions will have hard answerssearch for faster and more powerful ways to build better pr
+ototypes."
+
+- You will get l That's where the fun begins!
+- Talk to others, work with others, together you can do more!ost alony
+- You will break stuff
+- That' That's 
+<section class=slide" data-markdown data-toc>
+<script type=text/markdown">
+# Making mistakes...
+
+
+
 
     <section class="slide" data-markdown>
         <script type="text/template">
