@@ -246,9 +246,9 @@
             <img src="framework/img/workshop/gemma-usb-reset.png" style="float: right; width: 200px;">
             
             - Make sure you've unpacked the ZIP file with the course materials
-            - Go to the <code>sketches</code> folder and double-click <code>GemmaBlink/GemmaBlink.ino</code>
+            - Go to the `sketches` folder and double-click `GemmaBlink/GemmaBlink.ino`
             - Connect your Gemma with your USB cable
-            - Make sure <code>Tools/Board</code> is set to <code>Adafruit Gemma 8Mhz</code> and <code>Tools/Programmer</code> is set to <code>USBtinyISP</code> 
+            - Make sure `Tools/Board` is set to `Adafruit Gemma 8Mhz` and `Tools/Programmer` is set to `USBtinyISP` 
             - Press the Reset button on the Gemma and wait for the red LED to pulse<br>
             - Click the "Upload" button in the Arduino IDE
             
@@ -264,8 +264,121 @@
         <script type="text/markdown">
             # Variables
             
-            - variables are a way for you to hold information
-            - you use them when you want to change that information, like when you count 
+            - Variables are a way for you to hold information
+            - You use them when you want to change that information, like when you count
+            - You can check what they're holding, and decide what to do based on what you see
+            
+            
+            - Check out the GemmaFlutter sketch!
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # int
+            
+            ```c
+            int wait_time = 1;
+            ```
+            
+            - An `int` holds an Integer - that's a whole number (not a fraction)
+            - The variable called `wait_time` is being assigned the number 1
+            - It's like after this, everywhere you see `wait_time` you can substitute the number 1
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Change it up!
+            
+            ```c
+            wait_time = wait_time * 2;
+            ```
+
+            - You can change the number that wait_time is holding whenever you need, here we are multiplying it by `2`
+            - After this happens, it will no longer be `1`! What is it now?
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Functions
+            
+            - A function is like a recipe, it holds a bunch of instructions that you might want to do over and over
+            - `loop()` is an example of a function - it is run by your Gemma over and over as long as it's powered on
+            
+            ```c
+            void loop() {
+                // ... instructions go here
+            }
+            ```
+            
+            - `void` just means that when you tell Gemma to run this function, it has nothing to say back to you
+            - What if you wanted to write a function that calculated something and sent you back an Integer?
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Function arguments
+
+            Sometimes when you call a function, you want to give it some parameters...
+
+            ```
+            void blink_led( int how_many_times ) {
+                // turn the led off and on as many times as we were asked
+            }
+            ```
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Setup
+
+            Sometimes you just need to set things up before you can start. If you make a function called `setup()` Arduino will always call
+            it before it starts calling `loop()`
+
+            ```
+            void setup() {
+                pinMode(PIN_ONBOARD_LED, OUTPUT);
+            }
+            ```
+            
+            - `setup` is a great place to tell Arduino how you want to use its Input and Output pins
+            - in this case, we are calling the Arduino `pinMode` function with two arguments indicating which pin, and whether we want that pin in `OUTPUT` or `INPUT` mode
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # pinMode
+
+            `setup` is a great place to tell Arduino how you want to use its data pins.
+            
+            ```
+            void setup() {
+                pinMode(PIN_ONBOARD_LED, OUTPUT);
+            }
+            ```
+            
+            - in this case, we are calling the Arduino `pinMode` function with two arguments
+                - the first one says which pin
+                - the second one says we want that pin in `OUTPUT` or `INPUT` mode
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Punctuation is important!
+            
+            - Notice how every function name like `setup` is preceded either by `void` or the type of information it returns
+            - Every function name is followed by parantheses `(` and `)`
+            - The arguments to the function are inside the parentheses
+            - The body of the function starts with a brace-bracket `{` and ends with `}`
+            - Every instruction has to end with a semi-colon `;`
+            
+            If anything goes wrong, the Arduino IDE will try and give you a hint, but it's not very smart.
         </script>
     </section>
     
