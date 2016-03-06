@@ -1,4 +1,6 @@
-#Ladies Learning Code slide deck template
+# Kids Learning Code - Introduction to Arduino and Wearable Computing with the Adafruit Gemma
+
+This workshop content is based on the Arduino workshop template from Ladies Learning Code / Kids Learning Code, adapted by Stacey Vetzal ([svetzal on github](http://github.com/svetzal)).
 
 This slide deck includes features such as incremental display of content, interactive CSS demos built into the slides, markdown integration and presenter notes. View **slides.html** or http://ladieslearningcode.github.io/llc-slidedeck-template/slides.html for details on usage.
 
