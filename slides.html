@@ -204,11 +204,53 @@
         <script type="text/markdown">
             # Making mistakes...
             
-            ![](http://cl.ly/image/3c2y1v2A2o1q/Image%202015-01-29%20at%2011.55.36%20PM.png)
-            ![](http://cl.ly/image/3Z3U023P361J/Image%202015-01-30%20at%2012.37.27%20AM.png)            
+            ![](framework/img/workshop/keyboard-delete.png)
+            ![](framework/img/workshop/motherboard-on-fire.png)            
         </script>
     </section>
-    
+
+    <section class="slide side-by-side" data-markdown data-toc>
+        <script type="text/markdown">
+            # The Board At A Glance
+            
+            <img src="framework/img/workshop/JustGemma.png" style="width: 400px; display: block; margin: auto">
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Analog vs. Digital
+            
+            - Digital pins can only deal with Input or Output that is either ON or OFF (1 or 0)
+                - A switch is an appropriate input for a digital pin
+                - An LED might be an appropriate output for a digital pin
+            - Analog pins can deal with anything in between ON and OFF (a bit on, mostly off, really really on)
+                - A sensor might be an appropriate output for an analog pin
+                - A speaker might be an appropriate output for an analog pin
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Getting Started - Check Your Gemma
+            
+            <img src="framework/img/workshop/gemma-usb-reset.png" style="float: right; width: 200px;">
+            
+            - Make sure you've unpacked the ZIP file with the course materials
+            - Go to the <code>sketches</code> folder and double-click <code>GemmaBlink/GemmaBlink.ino</code>
+            - Connect your Gemma with your USB cable
+            - Make sure <code>Tools/Board</code> is set to <code>Adafruit Gemma 8Mhz</code> and <code>Tools/Programmer</code> is set to <code>USBtinyISP</code> 
+            - Press the Reset button on the Gemma and wait for the red LED to pulse<br>
+            - Click the "Upload" button in the Arduino IDE
+            
+            <small>
+                <!--[Serial port problems on OSX El-Capitan](https://www.kiwi-electronics.eu/blog?journal_blog_post_id=7)-->
+                <!--[Background Info](https://tzapu.com/making-ch340-ch341-serial-adapters-work-under-el-capitan-os-x)-->
+                <!--[Signed Driver](http://blog.sengotta.net/signed-mac-os-driver-for-winchiphead-ch340-serial-bridge/)-->
+            </small>
+        </script>
+    </section>
+
     <section class="slide" data-markdown data-toc>
         <script type="text/template">
             #Instructions
