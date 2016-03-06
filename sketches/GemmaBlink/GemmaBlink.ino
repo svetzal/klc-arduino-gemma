@@ -9,22 +9,20 @@
 
   This example code is in the public domain.
 
-  modified 8 May 2014
-  by Scott Fitzgerald
+  modified 2016-03-06
+  by Stacey Vetzal
  */
-
-#define PIN_ONBOARD_LED 1
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin 13 as an output.
-  pinMode(PIN_ONBOARD_LED, OUTPUT);
+  // initialize digital pin 1 as an output.
+  pinMode(1, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(PIN_ONBOARD_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(500);              // wait for a second
-  digitalWrite(PIN_ONBOARD_LED, LOW);    // turn the LED off by making the voltage LOW
-  delay(500);              // wait for a second
+  digitalWrite(1, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(1, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
 }

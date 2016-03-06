@@ -7,33 +7,32 @@
   by Stacey Vetzal
  */
 
-#define PIN_ONBOARD_LED 1
-
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin 13 as an output.
-  pinMode(PIN_ONBOARD_LED, OUTPUT);
+  pinMode(1, OUTPUT);
 }
 
+// let's declare and initialize some variables
 int speed_up = 1;
 int slow_down = 0;
 int speed_limit = 1024;
 
-int i = 1;
+int wait_time = 1;
 int direction = slow_down;
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(PIN_ONBOARD_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(i);              // wait for a second
-  digitalWrite(PIN_ONBOARD_LED, LOW);    // turn the LED off by making the voltage LOW
-  delay(i);              // wait for a second
+  digitalWrite(1, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(wait_time);              // wait for a second
+  digitalWrite(1, LOW);    // turn the LED off by making the voltage LOW
+  delay(wait_time);              // wait for a second
 
   if (direction == slow_down) {
-    i = i * 2;
-    if (i >= speed_limit) direction = speed_up;
+    wait_time = wait_time * 2;
+    if (wait_time >= speed_limit) direction = speed_up;
   } else {
-    i = i / 2;
-    if (i <= 1) direction = slow_down;
+    wait_time = wait_time / 2;
+    if (wait_time <= 1) direction = slow_down;
   }
 }
