@@ -262,6 +262,16 @@
 
     <section class="slide" data-markdown data-toc>
         <script type="text/markdown">
+            # Get Ready!
+            
+            - We're going to learn a bit about the programming language called C
+            - C was around before most of our popular programming languages, and is commonly used to program microcontrollers like
+              the Arduino because it's very simple and very fast
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
             # Variables
             
             - Variables are a way for you to hold information
@@ -379,6 +389,187 @@
             - Every instruction has to end with a semi-colon `;`
             
             If anything goes wrong, the Arduino IDE will try and give you a hint, but it's not very smart.
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Algorithms
+            
+            - Computer programming is all about writing specific instructions that are in sequence - otherwise known as an algorithm
+            - If I asked the question "How do I make a jelly sandwich?" your answer (in sequential steps) would be an algorithm
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Meet Robot Robot
+            
+            ![](framework/img/workshop/robot.png)
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Algorithms - Going to the Movies
+            
+            ![](framework/img/workshop/algorithm-movies.png)
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Review
+
+            - variables hold onto information, let you change it, and make decisions with it
+            - functions hold a group of instructions
+            - punctuation is important
+            - the `setup()` function is called by Arduino when it boots
+            - the `loop()` function is called by Arduino over and over again until it's turned off
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Arduino functions
+            
+            - Arduino provides some functions for you to do special things
+            - We already saw how `pinMode` can set a pin to be an Input or an Output
+            - We also saw how `digitalWrite` can turn an Output pin on or off (HIGH or LOW) to turn an LED on or off
+            - We saw how we can use `delay` to pause for some number of milliseconds
+                - there are 1000 milliseconds in 1 second
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Errors
+            
+            - Arduino is case-sensitive: lowercase and CAPITAL letters matter!
+            - Errors often come from missing brace-brackets `{}` parentheses `()` or semicolons `;`
+            - You're bound to get errors, every programmer does
+            - SAVE OFTEN!
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Tips and Tricks
+            
+            - Try and keep your code neat and tidy, while spacing isn't important for the computer, it can help you find things easier
+            - If things get messy, the Arduino IDE can help! Go to the `Tools` menu and choose `Auto Format` to re-format your code automatically
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Electricity!
+            
+            ![](framework/img/workshop/electricity.png)
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Circuits
+            
+            - in order for an electric current to happen, there must be a circuit
+            - a circuit is a closed path or loop around which an electric current flows
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Circuits
+            
+            - electricity works a bit like water
+            - you have a pump (battery) that pushes drops of water (electrons) down pipes (wires)
+            - you can produce heat, light, sound, movement, and much much more!
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Voltage
+            
+            - just like water needs pressure to push it through a pipe, electric current needs some force to make it flow
+            - a Volt is a measure of this electric pressure
+            - the Gemma needs 3.3 Volts to operate, but has extra electronics to "regulate" the 5V from your computer's USB port
+              - that's why it has both a 3Vo pin and a Vout pin; its "regulator" isn't very powerful so most of the time we'll want to
+                use the Vout pin to (carefully!) power LEDs
+            - just like a really high diving board can be dangerous, too much voltage can hurt electronics
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Electronic Components - Diodes, LEDs
+
+            <img src="framework/img/workshop/diode-symbol.png" style="height: 30px; float: right;">
+
+            - a Diode will only let electricity flow in one direction
+            - a Light Emitting Diode will only let electricity flow in one direction, AND it will light up
+            
+            <img src="framework/img/workshop/led-colours.png" style="height: 300px;">
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Electronic Components - Resistors
+
+            <img src="framework/img/workshop/resistor-symbol.png" style="height: 30px; float: right;">
+
+            - just like the size of the pipe determines how much water can flow through it, the resistance of a circuit determines how much electricity can flow through it
+            - resistors are like speed bumps, or like a tap on a faucet, sometimes you need some extra resistance in a circuit to stay safe and in control
+            - we measure resistance in Ohms, and regular resistors are marked with coloured bands indicating how much they resist ie. brown-black-red is a 1,000 ohm resister (1K ohm)
+            
+            <img src="framework/img/workshop/resistor.png" style="height: 100px;">
+        </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown data-toc>
+        <script type="text/markdown">
+            # Drawing Schematics
+
+            <img src="framework/img/workshop/gemma-led-circuit.png" style="width: 500px">
+            <img src="framework/img/workshop/gemma-led-diagram.png" style="width: 300px">
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Flora NeoPixel
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Single Pixel Circuit
+            
+            <img src="framework/img/workshop/gemma-with-pixel.png" style="width: 800px; float: right;">
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Four Pixel Circuit
+
+            <img src="framework/img/workshop/gemma-four-pixels.png" style="width: 500px; float: right;">
+            
+            - the tiny little Gemma can drive circuits with dozens or even hundreds of NeoPixels, depending on the program
+        </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+        <script type="text/markdown">
+            # Sewing Circuits
+            
+            - Don't cross the wires!
+                - this is called a "short circuit", and it won't work!
+            - *Plan out* how you want to lay out your pixels without crossing the wires
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eGtGoPhjmcc" frameborder="0" allowfullscreen></iframe>
         </script>
     </section>
     
