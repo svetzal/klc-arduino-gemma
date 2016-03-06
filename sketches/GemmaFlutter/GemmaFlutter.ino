@@ -5,7 +5,7 @@
 
   created 2016-03-06
   by Stacey Vetzal
- */
+*/
 
 // the setup function runs once when you press reset or power the board
 void setup() {
